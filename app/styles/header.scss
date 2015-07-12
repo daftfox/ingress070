@@ -1,0 +1,69 @@
+.header-logo{
+	height: 33vh;
+	background: $dark-bg;
+	position: relative;
+	
+	.header-navigation{
+		margin-top: 130px;
+
+		md-fab-speed-dial{
+			float: right;
+		}
+		.nav-menu-button{
+			padding: 4px 0 0 2px;
+			.nav-menu-icon{
+				font-size: 22px;
+			}
+		}
+		.fab-element{
+		  border-radius: 25px;
+		  padding: 10px;
+		  background: #F8F8F8;
+		  cursor: pointer;
+		  margin-bottom: 5px;
+
+		  span{
+		  	font-size: 16px;
+		  }
+		}
+	}
+
+	.app-title-wrapper{
+		bottom: 0;
+		position: absolute;
+
+
+		.app-title{
+			font-family: Coda;
+			font-size: 50px;
+			color: #FFF;
+		}
+	}
+
+	.theme-switcher{
+		bottom: 0;
+		position: absolute;
+		float: right;
+
+		.theme-switcher-title{
+			color: #FFF;
+			font-size: 16px;
+		}
+
+		.md-button.left {
+		    border-radius: 10px 0 0 10px;
+		    margin-right: 0;
+		}
+		.md-button.middle {
+		    border-radius: 0;
+		    margin-left: -3px;
+		    margin-right: -3px;
+		    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+		}
+		.md-button.right {
+			margin-left: 0;
+		    border-radius: 0 10px 10px 0;
+		}
+	}
+}

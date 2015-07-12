@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="fs070App" ng-controller="MainCtrl" style="font-family: Coda;">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="header-logo col-sm-12">
+        <div class="header-navigation col-sm-3">
+          <md-fab-speed-dial md-open="" md-direction="down" class="md-scale">
+            <md-fab-trigger>
+              <md-button aria-label="menu" md-theme="{{theme}}" md-theme-watch class="md-fab md-primary nav-menu-button md-raised">
+                <span class="glyphicon glyphicon-th nav-menu-icon"></span>
+              </md-button>
+            </md-fab-trigger>
+            <md-fab-actions>
+              <md-button aria-label="facebook" class="md-raised">
+                <span>FS070</span>
+              </md-button>
+              <md-button aria-label="facebook" class="md-raised">
+                <span>MISSION070</span>
+              </md-button>
+              <md-button aria-label="Google hangout" class="md-raised">
+                <span>Swag</span>
+              </md-button>
+            </md-fab-actions>
+          </md-fab-speed-dial>
+        </div>
+        <div class="app-title-wrapper col-sm-6 col-sm-offset-3">
+          <span class="app-title">INGRESS 070</span>
+        </div>
+        <div class="theme-switcher col-sm-3 col-sm-offset-9">
+          <span class="theme-switcher-title">Themepicker</span>
+          <md-button md-theme="enlightened" class="md-primary left md-raised" ng-click="alterTheme('enlightened')">Enlightened</md-button>
+          <md-button md-theme="default" class="md-primary middle md-raised" ng-click="alterTheme('default')">XFAC</md-button>
+          <md-button md-theme="resistance" class="md-primary right md-raised" ng-click="alterTheme('resistance')">Resistance</md-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <div class="col-sm-6 col-sm-offset-3">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
