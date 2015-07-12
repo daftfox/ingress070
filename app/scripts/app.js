@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name fs070App
+ * @name ingress070App
  * @description
- * # fs070App
+ * # ingress070App
  *
  * Main module of the application.
  */
 angular
-  .module('fs070App', [
+  .module('ingress070App', [
     'ngAnimate',
     'ngAria',
     'ngCookies',

@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the fs070App
  */
-angular.module('fs070App')
+angular.module('ingress070App')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

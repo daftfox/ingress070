@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the fs070App
  */
-angular.module('fs070App')
+angular.module('ingress070App')
   .controller('MainCtrl',['$scope', function ($scope) {
     $scope.theme = "default";
     $scope.alterTheme = function(theme){
