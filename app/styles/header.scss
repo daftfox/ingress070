@@ -1,10 +1,10 @@
 .header-logo{
-	height: 33vh;
+	height: 200px;
 	background: #222;
 	position: relative;
 	
 	.header-navigation{
-		margin-top: 130px;
+		margin-top: 165px;
 
 		md-fab-speed-dial{
 			float: right;
@@ -32,22 +32,47 @@
 		bottom: 0;
 		position: absolute;
 
-
 		.app-title{
 			font-family: Coda;
 			font-size: 50px;
 			color: #FFF;
 		}
+
+		.main-nav{
+			button{
+				width: 150px;
+			}
+		}
 	}
 
 	.theme-switcher{
-		bottom: 0;
+		bottom: 5px;
 		position: absolute;
-		float: right;
+		right: 15px;
+		width: 100px;
 
 		.theme-switcher-title{
+			margin-right: 8px;
 			color: #FFF;
+			float: right;
 			font-size: 16px;
+		}
+
+		.md-button.active.md-enlightened-theme{
+			box-shadow: 0px 0px 5px 2px #4CAF50;
+		}
+
+		.md-button.active.md-default-theme{
+			box-shadow: 0px 0px 5px 2px #009688;
+		}
+
+		.md-button.active.md-resistance-theme{
+			box-shadow: 0px 0px 5px 2px #2196F3;
+		}
+
+		.md-button{
+			float: right;
+			width: 120px;
 		}
 
 		.md-button.left {

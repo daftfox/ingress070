@@ -16,3 +16,10 @@
     width: 50vw!important;
   }
 }
+
+button{
+  a, a:hover, a:active, a:visited, a:link{
+    text-decoration: none;
+    color: inherit;
+  }
+}

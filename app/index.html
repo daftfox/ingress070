@@ -22,8 +22,8 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="header-logo col-sm-12">
-        <div class="header-navigation col-sm-3">
+      <div class="header-logo col-xs-12">
+        <div class="header-navigation col-xs-3">
           <md-fab-speed-dial md-open="" md-direction="down" class="md-scale">
             <md-fab-trigger>
               <md-button aria-label="menu" md-theme="{{theme}}" md-theme-watch class="md-fab md-primary nav-menu-button md-raised">
@@ -43,14 +43,28 @@
             </md-fab-actions>
           </md-fab-speed-dial>
         </div>
-        <div class="app-title-wrapper col-sm-6 col-sm-offset-3">
-          <span class="app-title">INGRESS 070</span>
+        <div class="app-title-wrapper col-xs-6 col-xs-offset-3">
+          <div class="app-title">INGRESS070</div>
+          <div class="main-nav">
+              <md-button md-theme="{{theme}}" ng-click="navigateTo('/')" md-theme-watch class="md-primary md-raised">
+                <span>Home</span>
+              </md-button>
+              <md-button md-theme="{{theme}}" ng-click="navigateTo('/fs070')" md-theme-watch class="md-primary md-raised">
+                <span>FS070</span>
+              </md-button>
+              <md-button md-theme="{{theme}}" ng-click="navigateTo('/missions')" md-theme-watch class="md-primary md-raised">
+                <span>Missions070</span>
+              </md-button>
+              <md-button md-theme="{{theme}}" ng-click="navigateTo('/swag')" md-theme-watch class="md-primary md-raised">
+                <span>Swag070</span>
+              </md-button>
+          </div>
         </div>
-        <div class="theme-switcher col-sm-3 col-sm-offset-9">
-          <span class="theme-switcher-title">Themepicker</span>
-          <md-button md-theme="enlightened" class="md-primary left md-raised" ng-click="alterTheme('enlightened')">Enlightened</md-button>
-          <md-button md-theme="default" class="md-primary middle md-raised" ng-click="alterTheme('default')">XFAC</md-button>
-          <md-button md-theme="resistance" class="md-primary right md-raised" ng-click="alterTheme('resistance')">Resistance</md-button>
+        <div class="theme-switcher">
+          <div class="theme-switcher-title">Theme</div>
+          <md-button md-theme="enlightened" class="md-primary md-raised" ng-class="{'active': theme == 'enlightened'}" ng-click="alterTheme('enlightened')">Enlightened</md-button>
+          <md-button md-theme="default" class="md-primary md-raised" ng-class="{'active': theme == 'default'}" ng-click="alterTheme('default')">XFAC</md-button>
+          <md-button md-theme="resistance" class="md-primary md-raised" ng-class="{'active': theme == 'resistance'}" ng-click="alterTheme('resistance')">Resistance</md-button>
         </div>
       </div>
     </div>
@@ -59,10 +73,11 @@
       <div ng-view=""></div>
     </div>
 
-    <div class="footer">
-      <div class="col-sm-6 col-sm-offset-3">
+    <div class="footer" id="footer">
+      <div class="col-xs-6 col-xs-offset-3">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
+      <img ng-click="banana()" class="banana" src="../images/banana.png">
     </div>
 
 
@@ -98,6 +113,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/fs070.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
 </body>
