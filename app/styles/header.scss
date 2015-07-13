@@ -1,13 +1,35 @@
+.fade {
+   opacity: 0;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.removefade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+
 .header-logo{
 	height: 200px;
 	background: #222;
 	position: relative;
 	
 	.header-navigation{
-		margin-top: 165px;
+		position: fixed;
+		top: 100px;
+		left: 15px;
 
 		md-fab-speed-dial{
 			float: right;
+
+			md-fab-actions{
+				position: relative;
+				left: 20px;
+			}
 		}
 		.nav-menu-button{
 			padding: 4px 0 0 2px;
@@ -34,8 +56,14 @@
 
 		.app-title{
 			font-family: Coda;
-			font-size: 50px;
 			color: #FFF;
+
+			.large{
+				font-size: 50px;
+			}
+			.small{
+				font-size: 24px;
+			}
 		}
 
 		.main-nav{

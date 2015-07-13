@@ -23,29 +23,35 @@
     <!-- Add your site or application content here -->
     <div class="header">
       <div class="header-logo col-xs-12">
-        <div class="header-navigation col-xs-3">
-          <md-fab-speed-dial md-open="" md-direction="down" class="md-scale">
+        <div class="header-navigation col-xs-3 " ng-show="hideFAB == false">
+          <md-fab-speed-dial md-open="openFAB" md-direction="down" class="md-scale">
             <md-fab-trigger>
               <md-button aria-label="menu" md-theme="{{theme}}" md-theme-watch class="md-fab md-primary nav-menu-button md-raised">
                 <span class="glyphicon glyphicon-th nav-menu-icon"></span>
               </md-button>
             </md-fab-trigger>
             <md-fab-actions>
-              <md-button aria-label="facebook" class="md-raised">
+              <md-button aria-label="FS070" ng-click="navigateTo('/')" class="md-raised">
+                <span>Home</span>
+              </md-button>
+              <md-button aria-label="FS070" ng-click="navigateTo('/fs070')" class="md-raised">
                 <span>FS070</span>
               </md-button>
-              <md-button aria-label="facebook" class="md-raised">
+              <md-button aria-label="Missions" ng-click="navigateTo('/missions')" class="md-raised">
                 <span>MISSION070</span>
               </md-button>
-              <md-button aria-label="Google hangout" class="md-raised">
+              <md-button aria-label="Swag" ng-click="navigateTo('/swag')" class="md-raised">
                 <span>Swag</span>
               </md-button>
             </md-fab-actions>
           </md-fab-speed-dial>
         </div>
         <div class="app-title-wrapper col-xs-6 col-xs-offset-3">
-          <div class="app-title">INGRESS070</div>
-          <div class="main-nav">
+          <div class="app-title">
+            <span class="hidden-xs large">INGRESS070</span>
+            <span class="visible-xs small">INGRESS070</span>
+          </div>
+          <div class="main-nav hidden-xs">
               <md-button md-theme="{{theme}}" ng-click="navigateTo('/')" md-theme-watch class="md-primary md-raised">
                 <span>Home</span>
               </md-button>
