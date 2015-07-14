@@ -30,9 +30,13 @@ angular
         templateUrl: 'views/fs070.html',
         controller: 'Fs070Ctrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/missions', {
+        templateUrl: 'views/missions.html',
+        controller: 'MissionsCtrl'
+      })
+      .when('/swag', {
+        templateUrl: 'views/swag.html',
+        controller: 'SwagCtrl'
       })
       .otherwise({
         redirectTo: '/'

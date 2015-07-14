@@ -11,7 +11,6 @@ angular.module('ingress070App')
   .controller('MainCtrl',['$scope', '$location', '$mdToast', '$document', '$animate', '$timeout',
   	function ($scope, $location, $mdToast, $document, $animate, $timeout) {
     $scope.theme = "default";
-    $scope.hideFAB = false;
     $scope.openFAB = false;
     $scope.alterTheme = function(theme){
     	$scope.theme = theme;

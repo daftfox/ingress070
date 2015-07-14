@@ -23,7 +23,7 @@
     <!-- Add your site or application content here -->
     <div class="header">
       <div class="header-logo col-xs-12">
-        <div class="header-navigation col-xs-3 " ng-show="hideFAB == false">
+        <div class="header-navigation col-xs-3 visible-xs">
           <md-fab-speed-dial md-open="openFAB" md-direction="down" class="md-scale">
             <md-fab-trigger>
               <md-button aria-label="menu" md-theme="{{theme}}" md-theme-watch class="md-fab md-primary nav-menu-button md-raised">
@@ -48,29 +48,36 @@
         </div>
         <div class="app-title-wrapper col-xs-6 col-xs-offset-3">
           <div class="app-title">
-            <span class="hidden-xs large">INGRESS070</span>
-            <span class="visible-xs small">INGRESS070</span>
+            <div class="hidden-xs large">INGRESS070</div>
+            <div class="visible-xs small">INGRESS070</div>
           </div>
           <div class="main-nav hidden-xs">
-              <md-button md-theme="{{theme}}" ng-click="navigateTo('/')" md-theme-watch class="md-primary md-raised">
+              <md-button md-theme="{{theme}}" ng-click="navigateTo('/')" md-theme-watch class="md-primary">
                 <span>Home</span>
               </md-button>
-              <md-button md-theme="{{theme}}" ng-click="navigateTo('/fs070')" md-theme-watch class="md-primary md-raised">
+              <md-button md-theme="{{theme}}" ng-click="navigateTo('/fs070')" md-theme-watch class="md-primary">
                 <span>FS070</span>
               </md-button>
-              <md-button md-theme="{{theme}}" ng-click="navigateTo('/missions')" md-theme-watch class="md-primary md-raised">
-                <span>Missions070</span>
+              <md-button md-theme="{{theme}}" ng-click="navigateTo('/missions')" md-theme-watch class="md-primary">
+                <span>MISSIONS070</span>
               </md-button>
-              <md-button md-theme="{{theme}}" ng-click="navigateTo('/swag')" md-theme-watch class="md-primary md-raised">
-                <span>Swag070</span>
+              <md-button md-theme="{{theme}}" ng-click="navigateTo('/swag')" md-theme-watch class="md-primary">
+                <span>Swag</span>
               </md-button>
           </div>
         </div>
         <div class="theme-switcher">
-          <div class="theme-switcher-title">Theme</div>
-          <md-button md-theme="enlightened" class="md-primary md-raised" ng-class="{'active': theme == 'enlightened'}" ng-click="alterTheme('enlightened')">Enlightened</md-button>
-          <md-button md-theme="default" class="md-primary md-raised" ng-class="{'active': theme == 'default'}" ng-click="alterTheme('default')">XFAC</md-button>
-          <md-button md-theme="resistance" class="md-primary md-raised" ng-class="{'active': theme == 'resistance'}" ng-click="alterTheme('resistance')">Resistance</md-button>
+          <md-button md-theme="enlightened" class="md-primary md-raised" ng-class="{'active': theme == 'enlightened'}" ng-click="alterTheme('enlightened')">
+            <span class="hidden-sm hidden-xs">Enlightened</span>
+            <span class="visible-sm visible-xs">ENL</span>
+          </md-button>
+          <md-button md-theme="default" class="md-primary md-raised" ng-class="{'active': theme == 'default'}" ng-click="alterTheme('default')">
+            <span>XFAC</span>
+          </md-button>
+          <md-button md-theme="resistance" class="md-primary md-raised" ng-class="{'active': theme == 'resistance'}" ng-click="alterTheme('resistance')">
+            <span class="hidden-sm hidden-xs">Resistance</span>
+            <span class="visible-sm visible-xs">RES</span>
+          </md-button>
         </div>
       </div>
     </div>
@@ -80,10 +87,51 @@
     </div>
 
     <div class="footer" id="footer">
-      <div class="col-xs-6 col-xs-offset-3">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+        <div class="col-sm-4 col-xs-4 footer-block">
+          <div class="footer-content">
+            <h3>Information</h3>
+            <div class="footer-row">
+              <div class="{{theme}}" for="email">E-mail:</div>
+              <span>firstsaturday070@gmail.com</span>
+            </div>
+            <div class="footer-row">
+              <div class="{{theme}}" for="paypal">Paypal:</div>
+              <form class="donate-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="96QGYJ5HBMR2G">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-4 footer-block">
+          <div class="footer-content">
+            <h3>Pages</h3>
+            <ul class="{{theme}}">
+              <li class="clickable" ng-click="navigateTo('/')">HOME</li>
+              <li class="clickable" ng-click="navigateTo('/fs070')">FS070</li>
+              <li class="clickable" ng-click="navigateTo('/missions')">MISSIONS070</li>
+              <li class="clickable" ng-click="navigateTo('/swag')">SWAG</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-4 footer-block">
+          <div class="footer-content"></div>
+        </div>
       </div>
       <img ng-click="banana()" class="banana" src="../images/banana.png">
+    </div>
+
+    <div id="shopping-cart">
+      <div class="shopping-cart-header">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        <span>Shopping cart</span>
+      </div>
+      <div class="shopping-cart-body">
+        
+      </div>
     </div>
 
 
@@ -120,7 +168,8 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/home.js"></script>
         <script src="scripts/controllers/fs070.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/missions.js"></script>
+        <script src="scripts/controllers/swag.js"></script>
         <!-- endbuild -->
 </body>
 </html>

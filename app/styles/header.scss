@@ -12,10 +12,18 @@
    -webkit-transition: opacity .25s ease-in-out;
 }
 
+.header{
+	height: 200px;
+	background: #222;
+}
+
 
 .header-logo{
 	height: 200px;
-	background: #222;
+	background-image: url("../images/fs-skyline.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
 	position: relative;
 	
 	.header-navigation{
@@ -53,8 +61,15 @@
 	.app-title-wrapper{
 		bottom: 0;
 		position: absolute;
+		height: 150px;
+		background-image: url("../images/fs-enl-res-logo.png");
+		background-position: left;
+		background-repeat: no-repeat;
 
 		.app-title{
+			bottom: 35px;
+			position: absolute;
+			margin-left: 50px;
 			font-family: Coda;
 			color: #FFF;
 
@@ -67,8 +82,12 @@
 		}
 
 		.main-nav{
+			bottom: 0;
+			left: 40px;
+			position: absolute;
+
 			button{
-				width: 150px;
+
 			}
 		}
 	}
@@ -117,6 +136,23 @@
 		.md-button.right {
 			margin-left: 0;
 		    border-radius: 0 10px 10px 0;
+		}
+	}
+}
+
+@media (max-width: 950px){
+	.main-nav{
+		button{
+			min-width: 12%;
+			span{
+				font-size: 12px!important;
+			}
+		}
+	}
+
+	.theme-switcher{
+		.md-button{
+			width: 40px!important;
 		}
 	}
 }
