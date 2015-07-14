@@ -67,28 +67,16 @@
 		background-repeat: no-repeat;
 
 		.app-title{
-			bottom: 35px;
-			position: absolute;
-			margin-left: 50px;
+			margin-top: 50px;
 			font-family: Coda;
 			color: #FFF;
-
-			.large{
-				font-size: 50px;
-			}
-			.small{
-				font-size: 24px;
-			}
+			font-size: 50px;
 		}
 
 		.main-nav{
 			bottom: 0;
 			left: 40px;
 			position: absolute;
-
-			button{
-
-			}
 		}
 	}
 
@@ -149,10 +137,25 @@
 			}
 		}
 	}
+	.app-title-wrapper{
+		padding-left: 0!important;
+		.app-title{
+			margin-top: 80px!important;
+			padding: 0!important;
+			text-align: center;
+			font-size: 24px!important;
+		}
+		
+	}
 
 	.theme-switcher{
+		margin-right: -10px;
 		.md-button{
-			width: 40px!important;
+			max-width: 60px;
+			min-width: 50px;
+			padding: 0px;
+			margin-left: 0px;
+			margin-right: 0px;
 		}
 	}
 }

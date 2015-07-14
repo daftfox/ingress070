@@ -105,11 +105,17 @@ md-toast{
 	}
 }
 
-#shopping-cart{
+.shopping-cart{
+	transition: 0.5s ease all;
 	position: fixed;
-	right: 5px;
+	right: -140px;
 	top: 225px;
-	width: 180px;
+	width: 200px;
+
+	md-list{
+	opacity: 0;
+		transition: 0.5s ease all;
+	}
 
 	.shopping-cart-header{
 		font-size: 18px;
@@ -118,5 +124,12 @@ md-toast{
 		.glyphicon{
 			margin-right: 10px;
 		}
+	}
+}
+
+.shopping-cart:hover{
+	right: 5px;
+	md-list{
+		opacity: 1;
 	}
 }

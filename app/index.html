@@ -2,7 +2,8 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>INGRESS070</title>
+    <link rel="icon" type="image/ico" href="../images/favicon.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -43,13 +44,15 @@
               <md-button aria-label="Swag" ng-click="navigateTo('/swag')" class="md-raised">
                 <span>Swag</span>
               </md-button>
+              <md-button aria-label="Swag" ng-click="navigateTo('/cart')" class="md-raised">
+                <span>Shopping cart</span>
+              </md-button>
             </md-fab-actions>
           </md-fab-speed-dial>
         </div>
         <div class="app-title-wrapper col-xs-6 col-xs-offset-3">
-          <div class="app-title">
-            <div class="hidden-xs large">INGRESS070</div>
-            <div class="visible-xs small">INGRESS070</div>
+          <div class="app-title col-xs-12">
+            INGRESS070
           </div>
           <div class="main-nav hidden-xs">
               <md-button md-theme="{{theme}}" ng-click="navigateTo('/')" md-theme-watch class="md-primary">
@@ -88,7 +91,7 @@
 
     <div class="footer" id="footer">
       <div class="col-sm-6 col-sm-offset-3 col-xs-12">
-        <div class="col-sm-4 col-xs-4 footer-block">
+        <div class="col-sm-6 col-xs-6 footer-block">
           <div class="footer-content">
             <h3>Information</h3>
             <div class="footer-row">
@@ -106,7 +109,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4 col-xs-4 footer-block">
+        <div class="col-sm-6 col-xs-6 footer-block">
           <div class="footer-content">
             <h3>Pages</h3>
             <ul class="{{theme}}">
@@ -117,20 +120,26 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm-4 col-xs-4 footer-block">
-          <div class="footer-content"></div>
-        </div>
       </div>
       <img ng-click="banana()" class="banana" src="../images/banana.png">
     </div>
 
-    <div id="shopping-cart">
+    <div id="shopping-cart" class="shopping-cart" class="hidden-sm">
       <div class="shopping-cart-header">
         <span class="glyphicon glyphicon-shopping-cart"></span>
         <span>Shopping cart</span>
       </div>
       <div class="shopping-cart-body">
-        
+        <md-list md-theme="{{theme}}" md-theme-watch>
+          <md-list-item class="md-2-line">
+            <img src="../images/patches.jpg" class="md-avatar" />
+            <div class="md-list-item-text">
+              <h3>FS070 Patch</h3>
+              <p>2pc € 4,00</p>
+            </div>
+          </md-list-item>
+          <md-subheader class="md-no-sticky">Total: € 5,00</md-subheader>
+        </md-list>
       </div>
     </div>
 
