@@ -24,7 +24,7 @@
     <!-- Add your site or application content here -->
     <div class="header">
       <div class="header-logo col-xs-12">
-        <div class="header-navigation col-xs-3 visible-xs">
+        <div class="header-navigation col-xs-3 hidden-sm">
           <md-fab-speed-dial md-open="openFAB" md-direction="down" class="md-scale">
             <md-fab-trigger>
               <md-button aria-label="menu" md-theme="{{theme}}" md-theme-watch class="md-fab md-primary nav-menu-button md-raised">
@@ -54,7 +54,7 @@
           <div class="app-title col-xs-12">
             INGRESS070
           </div>
-          <div class="main-nav hidden-xs">
+          <div class="main-nav hidden-sm">
               <md-button md-theme="{{theme}}" ng-click="navigateTo('/')" md-theme-watch class="md-primary">
                 <span>Home</span>
               </md-button>
@@ -124,10 +124,10 @@
       <img ng-click="banana()" class="banana" src="../images/banana.png">
     </div>
 
-    <div id="shopping-cart" class="shopping-cart" class="hidden-sm">
+    <div id="shopping-cart" class="shopping-cart hidden-sm">
       <div class="shopping-cart-header">
         <span class="glyphicon glyphicon-shopping-cart"></span>
-        <span>Shopping cart</span>
+        <md-button md-theme="{{theme}}" md-theme-watch class="md-primary">Shopping cart</md-button>
       </div>
       <div class="shopping-cart-body">
         <md-list md-theme="{{theme}}" md-theme-watch>
@@ -138,7 +138,10 @@
               <p>2pc € 4,00</p>
             </div>
           </md-list-item>
-          <md-subheader class="md-no-sticky">Total: € 5,00</md-subheader>
+          <md-subheader class="md-no-sticky">
+            <span>Total: </span>
+            <span class="pull-right">€ 5,00</span>
+          </md-subheader>
         </md-list>
       </div>
     </div>
