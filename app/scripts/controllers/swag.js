@@ -8,7 +8,7 @@
  * Controller of the fs070App
  */
 angular.module('ingress070App')
-.controller('SwagCtrl',['$scope', 'CategoryService', function ($scope, CategoryService) {
+.controller('SwagCtrl',['$scope', 'CategoryService', '$timeout', '$location', function ($scope, CategoryService, $timeout, $location) {
     $scope.tiles =[];
 
     CategoryService.getAll(null, function(res){
