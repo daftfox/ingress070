@@ -127,7 +127,7 @@
     <div id="shopping-cart" class="shopping-cart hidden-sm hidden-xs">
       <div class="shopping-cart-header">
         <span class="glyphicon glyphicon-shopping-cart"></span>
-        <md-button md-theme="{{theme}}" md-theme-watch class="md-primary">Shopping cart</md-button>
+        <md-button md-theme="{{theme}}" md-theme-watch class="md-primary" ng-click="navigateTo('/cart')">Shopping cart</md-button>
       </div>
       <div class="shopping-cart-body">
         <md-list md-theme="{{theme}}" md-theme-watch>
@@ -182,6 +182,9 @@
         <script src="scripts/controllers/fs070.js"></script>
         <script src="scripts/controllers/missions.js"></script>
         <script src="scripts/controllers/swag.js"></script>
+        <script src="scripts/controllers/cart.js"></script>
         <!-- endbuild -->
+
+        <script src="lib/paypal-buttons.js"></script>
 </body>
 </html>

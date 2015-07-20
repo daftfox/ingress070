@@ -1,39 +1,59 @@
-<md-card>
-  <img src="../images/20150606_123359.jpg" class="md-card-image" alt="First Saturday banner">
-  <md-card-content>
-    <h2 class="md-title">Swag</h2>
-    <p>
-      We sell a wide variety of swag at every recursion of FS070. All the revenues go into an account that is used solely for events or swag organized by Ingress070.
-      Not everybody is able to attend the event, so all swag is also sold online.<br>
-      We do apologize for the small variety of items that can be found online. We are still expanding.
-    </p>
-  </md-card-content>
-  <div class="col-xs-12 card-image-row">
-    <div class="col-xs-4">
-      <img src="../images/Awesome_1428169977254.jpg" />
-      <div class="image-caption">Ingress themed chocolates! The dream of every Ingress babe</div>
+<md-content>
+  <md-toolbar class="cart-toolbar md-tall" md-theme="{{theme}}" md-theme-watch>
+    <span flex></span>
+    <div class="md-toolbar-tools md-toolbar-tools-bottom">
+      <!--<md-button class="md-icon-button" aria-label="Settings">
+        <span class="glyphicon glyphicon glyphicon-th"></span>
+      </md-button>-->
+      <h2 class="md-toolbar-tools-bottom">
+        <span>Swag</span>
+      </h2>
+      <!--<span flex></span>
+      <md-button class="md-icon-button" aria-label="Favorite">
+        <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="More">
+        <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+      </md-button>-->
     </div>
-    <div class="col-xs-4">
-      <img src="../images/20150606_123413.jpg" />
-      <div class="image-caption">The acryllic custom keychains that were produced in collaboration with local hackerspace 'Revspace'</div>
+  </md-toolbar>
+  <md-card>
+    <img src="../images/20150606_123359.jpg" class="md-card-image" alt="First Saturday banner">
+    <md-card-content>
+      <h2 class="md-title">Swag</h2>
+      <p>
+        We sell a wide variety of swag at every recursion of FS070. All the revenues go into an account that is used solely for events or swag organized by Ingress070.
+        Not everybody is able to attend the event, so all swag is also sold online.<br>
+        We do apologize for the small variety of items that can be found online. We are still expanding.
+      </p>
+    </md-card-content>
+    <div class="col-xs-12 card-image-row">
+      <div class="col-xs-4">
+        <img src="../images/Awesome_1428169977254.jpg" />
+        <div class="image-caption">Ingress themed chocolates! The dream of every Ingress babe</div>
+      </div>
+      <div class="col-xs-4">
+        <img src="../images/20150606_123413.jpg" />
+        <div class="image-caption">The acryllic custom keychains that were produced in collaboration with local hackerspace 'Revspace'</div>
+      </div>
+      <div class="col-xs-4">
+        <img src="../images/Awesome_1428170193919.jpg" />
+        <div class="image-caption">Unique bracelets to show off your allignment</div>
+      </div>
     </div>
-    <div class="col-xs-4">
-      <img src="../images/Awesome_1428170193919.jpg" />
-      <div class="image-caption">Unique bracelets to show off your allignment</div>
-    </div>
-  </div>
-</md-card>
+  </md-card>
 
-<md-grid-list
-      md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
-      md-row-height-gt-md="1:1" md-row-height="4:3"
-      md-gutter="8px" md-gutter-gt-sm="4px" >
-  <md-grid-tile ng-repeat="tile in tiles"
-                md-rowspan="{{tile.span.row}}"
-                md-colspan="{{tile.span.col}}"
-                md-colspan-sm="1"
-                ng-class="tile.background" class="clickable">
-    <!--<md-icon md-svg-icon="{{tile.icon}}"></md-icon>-->
-    <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
-  </md-grid-tile>
-</md-grid-list>
+  <md-grid-list
+        md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-gutter="8px" md-gutter-gt-sm="4px" >
+    <md-grid-tile ng-repeat="tile in tiles"
+                  md-rowspan="{{tile.span.row}}"
+                  md-colspan="{{tile.span.col}}"
+                  md-colspan-sm="1"
+                  ng-class="tile.background" class="clickable">
+      <!--<md-icon md-svg-icon="{{tile.icon}}"></md-icon>-->
+      <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+</md-content>
