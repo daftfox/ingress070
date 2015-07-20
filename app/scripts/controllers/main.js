@@ -7,7 +7,8 @@
  * # MainCtrl
  * Controller of the fs070App
  */
-app.controller('MainCtrl',['$scope', '$location', '$mdToast', '$document', '$animate', '$timeout',
+angular.module('ingress070App')
+.controller('MainCtrl',['$scope', '$location', '$mdToast', '$document', '$animate', '$timeout',
   	function ($scope, $location, $mdToast, $document, $animate, $timeout) {
     $scope.theme = "default";
     $scope.openFAB = false;

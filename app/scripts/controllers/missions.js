@@ -7,6 +7,7 @@
  * # MissionsCtrl
  * Controller of the fs070App
  */
-app.controller('MissionsCtrl', function ($scope) {
+angular.module('ingress070App')
+.controller('MissionsCtrl', function ($scope) {
     
   });

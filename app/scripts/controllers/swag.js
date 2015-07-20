@@ -7,7 +7,8 @@
  * # SwagCtrl
  * Controller of the fs070App
  */
-app.controller('SwagCtrl',['$scope', 'CategoryService', function ($scope, CategoryService) {
+angular.module('ingress070App')
+.controller('SwagCtrl',['$scope', 'CategoryService', function ($scope, CategoryService) {
     CategoryService.getAll(null, function(res){
         console.log(res);
     });

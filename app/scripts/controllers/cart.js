@@ -7,7 +7,8 @@
  * # HomeCtrl
  * Controller of the fs070App
  */
-app.controller('CartCtrl',['$scope', function ($scope) {
+angular.module('ingress070App')
+.controller('CartCtrl',['$scope', function ($scope) {
     $scope.numBananas = 5;
     $scope.bananaPrice = 2;
     $scope.banana = {
