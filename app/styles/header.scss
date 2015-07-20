@@ -29,7 +29,7 @@
 	.header-navigation{
 		position: fixed;
 		top: 100px;
-		left: 30px;
+		left: 35px;
 
 		md-fab-speed-dial{
 			float: right;
@@ -158,4 +158,8 @@
 			margin-right: 0px;
 		}
 	}
+}
+
+md-card{
+	margin-bottom: 25px;
 }

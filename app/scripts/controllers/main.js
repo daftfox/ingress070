@@ -44,6 +44,11 @@ angular.module('ingress070App')
 	    });
     };
 
+    $scope.toggleFAB = function(){
+    	console.log("toggle");
+    	$scope.openFAB = !$scope.openFAB;
+    };
+
     $document.bind('scroll', function() {
 	  $scope.$apply(function() {
 	    if ($document.scrollTop() > 150) {
