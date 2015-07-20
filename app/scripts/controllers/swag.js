@@ -7,8 +7,11 @@
  * # SwagCtrl
  * Controller of the fs070App
  */
-angular.module('ingress070App')
-  .controller('SwagCtrl',['$scope', function ($scope) {
+app.controller('SwagCtrl',['$scope', 'CategoryService', function ($scope, CategoryService) {
+    CategoryService.getAll(null, function(res){
+        console.log(res);
+    });
+
     $scope.tiles =[
     	{
             icon : "",

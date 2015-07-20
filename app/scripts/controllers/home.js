@@ -7,7 +7,6 @@
  * # HomeCtrl
  * Controller of the fs070App
  */
-angular.module('ingress070App')
-  .controller('HomeCtrl',['$scope', function ($scope) {
+app.controller('HomeCtrl',['$scope', function ($scope) {
     
   }]);
