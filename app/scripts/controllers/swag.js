@@ -11,9 +11,9 @@ angular.module('ingress070App')
 .controller('SwagCtrl',['$scope', 'CategoryService', function ($scope, CategoryService) {
     $scope.tiles =[];
 
-
     CategoryService.getAll(null, function(res){
         $scope.categories = res;
+        aggregateData();
     });
 
     function aggregateData(){
