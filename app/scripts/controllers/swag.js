@@ -17,7 +17,7 @@ angular.module('ingress070App')
     });
 
     function aggregateData(){
-        angular.foreach($scope.categories, function(category){
+        angular.forEach($scope.categories, function(category){
             var newObj = {
                 icon : "",
                 id: category.id,
