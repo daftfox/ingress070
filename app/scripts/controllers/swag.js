@@ -9,35 +9,27 @@
  */
 angular.module('ingress070App')
 .controller('SwagCtrl',['$scope', 'CategoryService', function ($scope, CategoryService) {
+    $scope.tiles =[];
+
+
     CategoryService.getAll(null, function(res){
-        console.log(res);
+        $scope.categories = res;
     });
 
-    $scope.tiles =[
-    	{
-            icon : "",
-            title: "Patches",
-            background: "patches",
-            span: {
-            	row: 1,
-            	col: 2
+    function aggregateData(){
+        angular.foreach($scope.categories, function(category){
+            var newObj = {
+                icon : "",
+                id: category.id,
+                title: category.name,
+                background: category.name.toLowerCase(),
+                span: {
+                    row: 1,
+                    col: 2
+                }
             }
-        },{
-            icon : "",
-            title: "Custom swag",
-            background: "custom",
-            span: {
-            	row: 1,
-            	col: 2
-            }
-        },{
-            icon : "",
-            title: "Consumables",
-            background: "consumables",
-            span: {
-            	row: 1,
-            	col: 2
-            }
-        }
-    ];
+            $scope.tiles.push(newObj);
+        });
+    }
+
   }]);
