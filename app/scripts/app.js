@@ -38,6 +38,10 @@ var app = angular
         templateUrl: 'views/swag.html',
         controller: 'SwagCtrl'
       })
+      .when('/category/:categoryId', {
+        templateUrl: 'views/category.html',
+        controller: 'CategoryCtrl'
+      })
       .when('/cart', {
         templateUrl: 'views/cart.html',
         controller: 'CartCtrl'

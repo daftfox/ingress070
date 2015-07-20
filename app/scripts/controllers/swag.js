@@ -32,4 +32,11 @@ angular.module('ingress070App')
         });
     }
 
+    $scope.navigateTo = function(page){
+        $timeout(function(){
+            $scope.openFAB = false;
+        }, 200);
+        $location.path(page);
+    };
+
   }]);
