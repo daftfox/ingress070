@@ -20,6 +20,6 @@ angular.module('ingress070App')
     	angular.forEach($scope.items, function(item){
     		total += item.price * item.amount;
     	});
-    	return total;
+    	return Math.round( total * 10) / 10 ;
     };
   }]);

@@ -40,11 +40,11 @@ angular.module('ingress070App')
 			}
 
 			scope.totalPrice = function(){
-				var totalPrice = 0;
+				var total = 0;
 				angular.forEach(scope.cart, function(item){
-					totalPrice += item.amount * item.price;
+					total += item.amount * item.price;
 				});
-				return totalPrice;
+				return Math.round( total * 10) / 10 ;
 			}
 		},
 		controller: function($scope, $element){

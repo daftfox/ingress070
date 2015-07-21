@@ -50,7 +50,6 @@ angular.module('ingress070App')
     };
 
     $scope.toggleFAB = function(){
-    	console.log("toggle");
     	$scope.openFAB = !$scope.openFAB;
     };
 

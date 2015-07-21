@@ -17,7 +17,7 @@
   <md-list class="cart-item-list">
     <md-subheader class="md-no-sticky">Items currently in your basket:</md-subheader>
     <md-list-item class="md-3-line md-list-item" ng-repeat="(key, item) in items">
-      <img ng-src="{{item.image}}" class="md-avatar" alt="banana" />
+      <img src="images/banana.png"  class="md-avatar" alt="banana" />
       <div class="md-list-item-text">
         <h3>{{item.name}}</h3>
         <h4>€ {{item.price/100}}</h4>
@@ -51,14 +51,15 @@
         <h2 class="pull-right">€ {{totalPrice()/100}}</h2>
       </div>
       <div class="col-xs-3 checkout-wrapper">
-        <script async="async" src="lib/paypal-buttons.js?merchant=firstsaturday070@gmail.com" 
+        <script src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=firstsaturday070@gmail.com" 
+          async="async" 
           data-button="buynow" 
           data-name="INGRESS070 Swag" 
           data-quantity="1" 
-          data-amount="{{totalPrice()}}" 
+          data-amount="{{totalPrice()/100}}" 
           data-currency="EUR" 
           data-shipping="{{shippingCosts()}}" 
-          data-callback="http://www.fs070.nl"
+          data-callback="{{paymentSuccesURL}}"
         ></script>
       </div>
     </md-subheader>
