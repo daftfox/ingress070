@@ -6,7 +6,7 @@ angular.module('ingress070App')
 		scope: {
 			theme: "@"
 		},
-		templateUrl: "scripts/directives/templates/cartWidget.html",
+		templateUrl: "views/templates/cartWidget.html",
 		link: function(scope, element, attrs){
 			
 			scope.cart = CartService.getCart();
