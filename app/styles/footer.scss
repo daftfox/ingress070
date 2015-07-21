@@ -96,6 +96,15 @@ md-toast{
 	position: fixed!important;
 }
 
+.dark-overlay{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+}
+
 @media (max-width: 950px){
 	.footer-row{
 		span{
