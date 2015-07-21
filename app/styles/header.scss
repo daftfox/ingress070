@@ -46,6 +46,7 @@
 		position: fixed;
 		top: 100px;
 		left: 35px;
+		z-index: 3;
 
 		md-fab-speed-dial{
 			float: right;
@@ -62,6 +63,7 @@
 			}
 		}
 		.fab-element{
+		  z-index: 99999;
 		  border-radius: 25px;
 		  padding: 10px;
 		  background: #F8F8F8;
