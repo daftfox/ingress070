@@ -98,7 +98,7 @@ md-toast{
 
 .dark-overlay{
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -110,6 +110,41 @@ md-toast{
 		span{
 			font-size: 12px;
 			word-wrap: break-word;
+		}
+	}
+
+	.md-list-item-text{
+		h3{
+			font-size: 18px!important;
+		}
+
+		h4{
+			font-size: 14px!important;
+		}
+
+		p{
+			font-size: 12px!important;
+		}
+	}
+
+	md-list-item{
+		padding-right: 0!important;
+		.md-avatar{
+			height: 50px!important;
+			width: 50px!important;
+		}
+	}
+
+	.item-actions{
+		padding-right: 0;
+
+		.md-icon-button{
+			margin-right: 0;
+		}
+
+		md-input-container{
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 }

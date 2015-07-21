@@ -17,20 +17,20 @@
 	<md-list class="product-list">
       <md-list-item class="md-3-line md-no-proxy" ng-repeat="item in products">
         <img src="../images/patches.jpg" class="md-avatar" alt="alt" />
-        <div class="md-list-item-text">
+        <div class="md-list-item-text col-xs-8">
           <h3>{{item.name}}</h3>
           <h4>€ {{(item.price/100)}}</h4>
           <p>{{item.description}}</p>
         </div>
 
-        <div class="item-actions col-xs-6">
-          <md-input-container md-theme-watch class="col-xs-6">
+        <div class="item-actions col-xs-4">
+          <md-input-container md-theme-watch class="col-xs-4 col-sm-6">
             <label>Amount</label>
             <input min="1" type="number" ng-model="item.num">
           </md-input-container>
        	  <md-button class="md-icon-button" aria-label="test" ng-click="addToCart(item, item.num)">
-		    <span class="glyphicon glyphicon-shopping-cart glyphicon-large"></span>
-		  </md-button>
+		        <span class="glyphicon glyphicon-shopping-cart glyphicon-large"></span>
+		      </md-button>
         </div>
       </md-list-item>
 
