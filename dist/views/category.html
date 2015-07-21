@@ -1,1 +1,5 @@
-<h2 ng-repeat="product in products">{{product.name}}</h2>
+<md-content> <md-toolbar class="cart-toolbar md-tall" md-theme="{{theme}}" md-theme-watch> <span flex></span> <div class="md-toolbar-tools md-toolbar-tools-bottom"> <!--<md-button class="md-icon-button" aria-label="Settings">
+        <span class="glyphicon glyphicon glyphicon-th"></span>
+      </md-button>--> <h2 class="md-toolbar-tools-bottom"> <span>Patches</span> </h2> <span flex></span> <!--<md-button class="md-icon-button refresh-button" aria-label="Favorite">
+        <span class="glyphicon glyphicon-refresh"></span>
+      </md-button>--> </div> </md-toolbar> <md-list class="product-list"> <md-list-item class="md-3-line md-no-proxy" ng-repeat="item in products"> <img src="../images/patches.d6a9f46c.jpg" class="md-avatar" alt="alt"> <div class="md-list-item-text"> <h3>{{item.name}}</h3> <h4>€ {{(item.price/100)}}</h4> <p>{{item.description}}</p> </div> <div class="item-actions col-xs-6"> <md-input-container md-theme-watch class="col-xs-6"> <label>Amount</label> <input min="1" type="number" ng-model="item.num"> </md-input-container> <md-button class="md-icon-button" aria-label="test" ng-click="addToCart(item, item.num)"> <span class="glyphicon glyphicon-shopping-cart glyphicon-large"></span> </md-button> </div> </md-list-item> </md-list> </md-content>

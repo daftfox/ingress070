@@ -1,0 +1,43 @@
+.product-list{
+	
+	md-list-item{
+		.md-avatar{
+			width: 100px!important;
+			height: 100px!important;
+		}
+		.md-list-item-text{
+			h3{
+				font-size: 24px;
+			}
+
+			h4{
+				font-size: 18px;
+			}
+
+			p{
+				font-size: 16px;
+			}
+		}
+
+		.item-actions{
+			margin-top: 15px;
+
+			md-input-container{
+				margin-top: 10px;
+			}
+
+			.md-button{
+				text-align: center;
+				vertical-align: middle;
+				float: right;
+				margin-top: 25px;
+			}
+
+			.glyphicon-large{
+				margin-top: 12px;
+				font-size: 20px;
+			}
+		}
+
+	}	
+}

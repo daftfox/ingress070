@@ -104,32 +104,3 @@ md-toast{
 		}
 	}
 }
-
-.shopping-cart{
-	transition: 0.5s ease all;
-	position: fixed;
-	right: -140px;
-	top: 225px;
-	width: 200px;
-
-	md-list{
-	opacity: 0;
-		transition: 0.5s ease all;
-	}
-
-	.shopping-cart-header{
-		font-size: 18px;
-		text-align: center;
-
-		.glyphicon{
-			margin-right: 10px;
-		}
-	}
-}
-
-.shopping-cart:hover{
-	right: 5px;
-	md-list{
-		opacity: 1;
-	}
-}

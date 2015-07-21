@@ -1,3 +1,63 @@
+.shopping-cart.bounce {
+  animation: bounce 0.3s 1;
+  -webkit-animation: bounce 0.3s 1;
+  -moz-animation: bounce 0.3s 1;
+  -o-animation: bounce 0.3s 1;
+}
+ 
+@-webkit-keyframes bounce {
+    0%, 100% {-webkit-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-5px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(5px);}
+}
+
+@keyframes bounce {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
+    20%, 40%, 60%, 80% {transform: translateX(5px);}
+}
+.shopping-cart.visible{
+	right: 0!important;
+	md-list{
+		opacity: 1;
+	}
+}
+.shopping-cart{
+	background: #fff;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	transition: 0.5s ease all;
+	position: fixed;
+	right: -140px;
+	top: 225px;
+	width: 200px;
+
+	md-list{
+		opacity: 0;
+		transition: 0.5s ease all;
+		md-divider{
+			margin: 0 10px;
+		}
+	}
+
+	.shopping-cart-header{
+		font-size: 18px;
+		text-align: center;
+
+		.glyphicon{
+			margin-right: 10px;
+		}
+	}
+}
+
+.shopping-cart:hover{
+	right: 5px;
+	md-list{
+		opacity: 1;
+	}
+}
+
+
 .cart-toolbar{
 	margin-top: 7px;
 }
@@ -8,6 +68,8 @@
   		transition:all ease 0.5s;
 	}
 }
+
+
 
 .refresh-button:hover{
 	span{
@@ -20,6 +82,19 @@
 .cart-item-list{
 	margin-bottom: 30px;
 
+}
+
+md-list-item{
+	.remove-cart-item{
+		display: none;
+		margin-top: 18px;
+	}
+}
+
+md-list-item:hover{
+	.remove-cart-item{
+		display: initial;
+	}
 }
 
 .md-list-item{
@@ -45,6 +120,12 @@
 .md-list-item.ng-leave.ng-leave-active {
 	opacity: 0;
 	height: 0;
+}
+
+.md-list-item-text{
+	h3{
+		line-height: 100%!important;
+	}
 }
 
 .md-list-item-inputs{
@@ -77,4 +158,5 @@
 
 .paypal-button{
 	display: block;
+	height: 30px;
 }

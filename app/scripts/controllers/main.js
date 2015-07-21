@@ -8,32 +8,37 @@
  * Controller of the fs070App
  */
 angular.module('ingress070App')
-.controller('MainCtrl',['$scope', '$location', '$mdToast', '$document', '$animate', '$timeout',
-  	function ($scope, $location, $mdToast, $document, $animate, $timeout) {
+.controller('MainCtrl',['$scope', '$location', '$mdToast', '$document', '$animate', '$timeout', 'CartService',
+  	function ($scope, $location, $mdToast, $document, $animate, $timeout, CartService) {
+
     $scope.theme = "default";
     $scope.openFAB = false;
-    $scope.alterTheme = function(theme){
-    	$scope.theme = theme;
-    }
-    $scope.navigateTo = function(page){
-    	$timeout(function(){
-    		$scope.openFAB = false;
-    	}, 200);
-    	$location.path(page);
-    };
     $scope.toastPosition = {
 	    bottom: true,
 	    top: false,
 	    left: false,
 	    right: true
   	};
+
+    $scope.alterTheme = function(theme){
+      $scope.theme = theme;
+    }
+
+    $scope.navigateTo = function(page){
+      $timeout(function(){
+        $scope.openFAB = false;
+      }, 200);
+      $location.path(page);
+    };
+    
   	$scope.getToastPosition = function() {
       return Object.keys($scope.toastPosition)
       	.filter(function(pos) { return $scope.toastPosition[pos]; })
       	.join(' ');
   	};
+
     $scope.banana = function(){
-		var toast = $mdToast.simple()
+		  var toast = $mdToast.simple()
 	      .content('Banana!')
 	      .action('Close')
 	      .hideDelay(10000)
@@ -50,7 +55,7 @@ angular.module('ingress070App')
     };
 
     $document.bind('scroll', function() {
-	  $scope.$apply(function() {
+	   $scope.$apply(function() {
 	    if ($document.scrollTop() > 150) {
 	      var element = angular.element(".header-navigation");
 	      $animate.addClass(element, "fade");
@@ -61,5 +66,5 @@ angular.module('ingress070App')
 	      $animate.removeClass(element, "fade");
 	    }
 	  });
-	});
+	 });
   }]);

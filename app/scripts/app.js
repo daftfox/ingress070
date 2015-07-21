@@ -24,27 +24,33 @@ var app = angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
+        cartVisible: false
       })
       .when('/fs070', {
         templateUrl: 'views/fs070.html',
-        controller: 'Fs070Ctrl'
+        controller: 'Fs070Ctrl',
+        cartVisible: false
       })
       .when('/missions', {
         templateUrl: 'views/missions.html',
-        controller: 'MissionsCtrl'
+        controller: 'MissionsCtrl',
+        cartVisible: false
       })
       .when('/swag', {
         templateUrl: 'views/swag.html',
-        controller: 'SwagCtrl'
+        controller: 'SwagCtrl',
+        cartVisible: true
       })
       .when('/category/:categoryId', {
         templateUrl: 'views/category.html',
-        controller: 'CategoryCtrl'
+        controller: 'CategoryCtrl',
+        cartVisible: true
       })
       .when('/cart', {
         templateUrl: 'views/cart.html',
-        controller: 'CartCtrl'
+        controller: 'CartCtrl',
+        cartVisible: true
       })
       .otherwise({
         redirectTo: '/'
