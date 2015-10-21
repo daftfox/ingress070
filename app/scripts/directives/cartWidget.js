@@ -47,8 +47,8 @@ angular.module('ingress070App')
 				return Math.round( total * 10) / 10 ;
 			}
 		},
-		controller: function($scope, $element){
+		controller: ['$scope', '$attrs', function($scope, $attrs){
 			
-		}
+		}]
 	}
 });

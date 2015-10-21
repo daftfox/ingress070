@@ -8,6 +8,6 @@
  * Controller of the fs070App
  */
 angular.module('ingress070App')
-.controller('MissionsCtrl', function ($scope) {
+.controller('MissionsCtrl', ['$scope', function ($scope) {
     
-  });
+  }]);

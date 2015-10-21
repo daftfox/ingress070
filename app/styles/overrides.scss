@@ -1,0 +1,8 @@
+md-fab-speed-dial md-fab-actions {
+    height: auto!important;
+}
+
+md-fab-speed-dial.md-scale .md-fab-action-item {
+    -webkit-transform: scale(1)!important;
+            transform: scale(1)!important;
+}

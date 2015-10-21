@@ -12,7 +12,6 @@ angular.module('ingress070App')
   	function ($scope, $location, $mdToast, $document, $animate, $timeout, CartService) {
 
     $scope.theme = "default";
-    $scope.openFAB = false;
     $scope.toastPosition = {
 	    bottom: true,
 	    top: false,
@@ -26,7 +25,6 @@ angular.module('ingress070App')
 
     $scope.navigateTo = function(page){
       $timeout(function(){
-        $scope.openFAB = false;
       }, 200);
       $location.path(page);
     };
@@ -47,10 +45,6 @@ angular.module('ingress070App')
 	    $mdToast.show(toast).then(function() {
 	      console.log("Banana!");
 	    });
-    };
-
-    $scope.toggleFAB = function(){
-    	$scope.openFAB = !$scope.openFAB;
     };
 
     $document.bind('scroll', function() {

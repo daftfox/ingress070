@@ -27,7 +27,7 @@
           <div class="header-navigation col-xs-3 visible-xs visible-sm">
             <md-fab-speed-dial md-open="openFAB" md-direction="down" class="md-scale">
               <md-fab-trigger>
-                <md-button aria-label="menu" ng-click="toggleFAB()" md-theme="{{theme}}" md-theme-watch class="md-fab md-primary nav-menu-button md-raised">
+                <md-button aria-label="menu" md-theme="{{theme}}" md-theme-watch class="md-fab md-primary nav-menu-button md-raised">
                   <span class="glyphicon glyphicon-th nav-menu-icon"></span>
                 </md-button>
               </md-fab-trigger>
@@ -39,12 +39,12 @@
                   <span>FS070</span>
                 </md-button>
                 <md-button aria-label="Missions" ng-click="navigateTo('/missions')" class="md-raised">
-                  <span>MISSION070</span>
+                  <span>DESTINY</span>
                 </md-button>
-                <md-button aria-label="Swag" ng-click="navigateTo('/swag')" class="md-raised">
+                <md-button ng-hide="true" aria-label="Swag" ng-click="navigateTo('/swag')" class="md-raised">
                   <span>Swag</span>
                 </md-button>
-                <md-button aria-label="Swag" ng-click="navigateTo('/cart')" class="md-raised">
+                <md-button ng-hide="true" aria-label="Swag" ng-click="navigateTo('/cart')" class="md-raised">
                   <span>Shopping cart</span>
                 </md-button>
               </md-fab-actions>
@@ -62,9 +62,9 @@
                   <span>FS070</span>
                 </md-button>
                 <md-button md-theme="{{theme}}" ng-click="navigateTo('/missions')" md-theme-watch class="md-primary">
-                  <span>MISSIONS070</span>
+                  <span>DESTINY</span>
                 </md-button>
-                <md-button md-theme="{{theme}}" ng-click="navigateTo('/swag')" md-theme-watch class="md-primary">
+                <md-button ng-hide="true" md-theme="{{theme}}" ng-click="navigateTo('/swag')" md-theme-watch class="md-primary">
                   <span>Swag</span>
                 </md-button>
             </div>
@@ -116,8 +116,8 @@
             <ul class="{{theme}}">
               <li class="clickable" ng-click="navigateTo('/')">HOME</li>
               <li class="clickable" ng-click="navigateTo('/fs070')">FS070</li>
-              <li class="clickable" ng-click="navigateTo('/missions')">MISSIONS070</li>
-              <li class="clickable" ng-click="navigateTo('/swag')">SWAG</li>
+              <li class="clickable" ng-click="navigateTo('/missions')">DESTINY</li>
+              <li class="clickable" ng-hide="true" ng-click="navigateTo('/swag')">SWAG</li>
             </ul>
           </div>
         </div>
@@ -125,18 +125,19 @@
       <img ng-click="banana()" class="banana" src="../images/banana.png">
     </div>
     <div class="dark-overlay" ng-show="openFAB"></div>
-    <cart-widget theme="{{theme}}"></cart-widget>
+    <cart-widget ng-hide="true" theme="{{theme}}"></cart-widget>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-65407913-1');
-       ga('send', 'pageview');
+      ga('create', 'UA-65407913-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -146,12 +147,8 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
@@ -177,6 +174,7 @@
 
         <!-- directives -->
         <script src="scripts/directives/cartWidget.js"></script>
+        <script src="scripts/directives/fabSpeedDialFix.js"></script>
 
         <!-- endbuild -->
 

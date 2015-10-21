@@ -12,13 +12,9 @@ var app = angular
   .module('ingress070App', [
     'ngAnimate',
     'ngAria',
-    'ngCookies',
     'ngMaterial',
-    'ngMessages',
     'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ngRoute'
   ])
   .config(function ($routeProvider) {
     $routeProvider
